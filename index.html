@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart City Data Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Header -->
+        <header>
+            <h1>Smart City Data Dashboard</h1>
+            <div class="filters">
+                <select id="location-filter">
+                    <option value="all">All Locations</option>
+                    <option value="downtown">Downtown</option>
+                    <option value="suburbs">Suburbs</option>
+                </select>
+                <select id="time-filter">
+                    <option value="24h">Last 24 Hours</option>
+                    <option value="7d">Last 7 Days</option>
+                    <option value="30d">Last 30 Days</option>
+                </select>
+            </div>
+        </header>
+
+        <!-- Dashboard Grid -->
+        <div class="grid">
+            <!-- Traffic Flow (Map) -->
+            <div class="panel map">
+                <h2>Traffic Flow</h2>
+                <div id="map-placeholder">Map Placeholder (Integrate Leaflet/Google Maps)</div>
+            </div>
+
+            <!-- Pollution Levels (Pie Chart) -->
+            <div class="panel">
+                <h2>Pollution Levels</h2>
+                <canvas id="pollution-chart"></canvas>
+            </div>
+
+            <!-- Energy Consumption (Bar Chart) -->
+            <div class="panel">
+                <h2>Energy Consumption</h2>
+                <canvas id="energy-chart"></canvas>
+            </div>
+
+            <!-- Public Safety (Line Chart) -->
+            <div class="panel">
+                <h2>Public Safety</h2>
+                <canvas id="safety-chart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include Chart.js for visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
